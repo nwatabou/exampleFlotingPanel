@@ -38,6 +38,7 @@ final class SecondViewController: UIViewController, FloatingPanelControllerDeleg
         fpc.delegate = vc
         fpc.layout = CustomFloatingPanelLayout()
         fpc.behavior = CustomFloatingPanelBehavior()
+        fpc.surfaceView.grabberHandle.isHidden = true
         fpc.set(contentViewController: vc)
         return fpc
     }
@@ -63,6 +64,15 @@ extension SecondViewController  {
 
         guard let fpc = fpc else { return }
         fpc.track(scrollView: tableView)
+
+        let tapGestureForBackDropView = UITapGestureRecognizer()
+        tapGestureForBackDropView.addTarget(self, action: #selector(tappedBackDropView))
+        fpc.backdropView.addGestureRecognizer(tapGestureForBackDropView)
+    }
+
+    @objc
+    private func tappedBackDropView() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -75,6 +85,15 @@ extension SecondViewController {
         var anchors: [FloatingPanelState : FloatingPanelLayoutAnchoring] = [
             .half: FloatingPanelLayoutAnchor(fractionalInset: 0.7, edge: .bottom, referenceGuide: .safeArea)
         ]
+
+        func backdropAlpha(for state: FloatingPanelState) -> CGFloat {
+            switch state {
+            case .half:
+                return 0.1
+            default:
+                return 0.7
+            }
+        }
     }
 
     class CustomFloatingPanelBehavior: FloatingPanelBehavior {
