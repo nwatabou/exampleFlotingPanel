@@ -15,6 +15,7 @@
 		B9C88EB0263542EA00FA1D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C88EAF263542EA00FA1D49 /* Assets.xcassets */; };
 		B9C88EB3263542EA00FA1D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C88EB1263542EA00FA1D49 /* LaunchScreen.storyboard */; };
 		B9C88EC02635435500FA1D49 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C88EBF2635435500FA1D49 /* SecondViewController.swift */; };
+		B9C88EC4263555AC00FA1D49 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C88EC3263555AC00FA1D49 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B9C88EB2263542EA00FA1D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9C88EB4263542EA00FA1D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C88EBF2635435500FA1D49 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B9C88EC3263555AC00FA1D49 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B9C88EA8263542EA00FA1D49 /* SceneDelegate.swift */,
 				B9C88EAA263542EA00FA1D49 /* ViewController.swift */,
 				B9C88EBF2635435500FA1D49 /* SecondViewController.swift */,
+				B9C88EC3263555AC00FA1D49 /* InputView.swift */,
 				B9C88EAC263542EA00FA1D49 /* Main.storyboard */,
 				B9C88EAF263542EA00FA1D49 /* Assets.xcassets */,
 				B9C88EB1263542EA00FA1D49 /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			files = (
 				B9C88EC02635435500FA1D49 /* SecondViewController.swift in Sources */,
 				B9C88EAB263542EA00FA1D49 /* ViewController.swift in Sources */,
+				B9C88EC4263555AC00FA1D49 /* InputView.swift in Sources */,
 				B9C88EA7263542EA00FA1D49 /* AppDelegate.swift in Sources */,
 				B9C88EA9263542EA00FA1D49 /* SceneDelegate.swift in Sources */,
 			);
