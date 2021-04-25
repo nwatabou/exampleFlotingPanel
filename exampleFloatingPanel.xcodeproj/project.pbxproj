@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47E1DA2714D50387A49BB097 /* Pods_exampleFloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807CB621240C17A7EE10713D /* Pods_exampleFloatingPanel.framework */; };
 		B9C88EA7263542EA00FA1D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C88EA6263542EA00FA1D49 /* AppDelegate.swift */; };
 		B9C88EA9263542EA00FA1D49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C88EA8263542EA00FA1D49 /* SceneDelegate.swift */; };
 		B9C88EAB263542EA00FA1D49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C88EAA263542EA00FA1D49 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B200AFF2FC491710F41BDA /* Pods-exampleFloatingPanel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exampleFloatingPanel.release.xcconfig"; path = "Target Support Files/Pods-exampleFloatingPanel/Pods-exampleFloatingPanel.release.xcconfig"; sourceTree = "<group>"; };
+		1B4976087C8DFF8111327E04 /* Pods-exampleFloatingPanel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exampleFloatingPanel.debug.xcconfig"; path = "Target Support Files/Pods-exampleFloatingPanel/Pods-exampleFloatingPanel.debug.xcconfig"; sourceTree = "<group>"; };
+		807CB621240C17A7EE10713D /* Pods_exampleFloatingPanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exampleFloatingPanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C88EA3263542EA00FA1D49 /* exampleFloatingPanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleFloatingPanel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C88EA6263542EA00FA1D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C88EA8263542EA00FA1D49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E1DA2714D50387A49BB097 /* Pods_exampleFloatingPanel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B2D8F8C88BB9997229DA777 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				807CB621240C17A7EE10713D /* Pods_exampleFloatingPanel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9C88E9A263542EA00FA1D49 = {
 			isa = PBXGroup;
 			children = (
 				B9C88EA5263542EA00FA1D49 /* exampleFloatingPanel */,
 				B9C88EA4263542EA00FA1D49 /* Products */,
+				C6D095D807D1A16E6961FD0D /* Pods */,
+				7B2D8F8C88BB9997229DA777 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = exampleFloatingPanel;
 			sourceTree = "<group>";
 		};
+		C6D095D807D1A16E6961FD0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B4976087C8DFF8111327E04 /* Pods-exampleFloatingPanel.debug.xcconfig */,
+				02B200AFF2FC491710F41BDA /* Pods-exampleFloatingPanel.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9C88EB7263542EA00FA1D49 /* Build configuration list for PBXNativeTarget "exampleFloatingPanel" */;
 			buildPhases = (
+				DBCDCD3D6A2EF3F27D4A9BDF /* [CP] Check Pods Manifest.lock */,
 				B9C88E9F263542EA00FA1D49 /* Sources */,
 				B9C88EA0263542EA00FA1D49 /* Frameworks */,
 				B9C88EA1263542EA00FA1D49 /* Resources */,
+				DC4CB819F4E14EC387628F83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBCDCD3D6A2EF3F27D4A9BDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-exampleFloatingPanel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4CB819F4E14EC387628F83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-exampleFloatingPanel/Pods-exampleFloatingPanel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-exampleFloatingPanel/Pods-exampleFloatingPanel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-exampleFloatingPanel/Pods-exampleFloatingPanel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9C88E9F263542EA00FA1D49 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		B9C88EB8263542EA00FA1D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4976087C8DFF8111327E04 /* Pods-exampleFloatingPanel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		B9C88EB9263542EA00FA1D49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B200AFF2FC491710F41BDA /* Pods-exampleFloatingPanel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
